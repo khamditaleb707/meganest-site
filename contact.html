@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place an Order | Meganest LLC</title>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; form-action 'self';">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap"
+          rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <img src="assets/logo.jpg" alt="Meganest Logo" class="logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="products/lamb.html">Whole Lamb</a></li>
+                <li><a href="products/bison.html">Whole Bison</a></li>
+                <li><a href="/contact.html" class="active">Order</a></li>
+                <li><a href="company.html">Company</a></li>
+                <li><a href="policy.html">Privacy</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Place Your Order</h1>
+            <p>Fill out the form below and we’ll send you a secure Stripe payment link.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <form action="/contact" method="POST" autocomplete="on">
+                <input type="text" name="name" placeholder="Your Full Name" required minlength="2" maxlength="100" pattern="[A-Za-z\s']+" title="Name should only contain letters and spaces.">
+                <input type="email" name="email" placeholder="Your Email Address" required maxlength="100">
+                <input type="tel" name="phone" placeholder="Phone Number (optional)" pattern="[0-9+()\- ]{7,20}" title="Valid phone numbers only.">
+                <select name="product" required>
+                    <option value="">Select Product</option>
+                    <option value="Whole Lamb">Whole Lamb</option>
+                    <option value="Whole Bison">Whole Bison</option>
+                    <option value="Whole Cow">Whole Cow</option>
+                    <option value="Whole Buffalo">Whole Buffalo</option>
+                </select>
+                <textarea name="message" rows="5" placeholder="Your Message or Special Requests" required minlength="5" maxlength="1000"></textarea>
+                <button type="submit">Send Order Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Meganest LLC &mdash; USDA-Compliant Wholesale Meat Supplier</p>
+        <p>Email: <a href="mailto:support@grassfedprime.com" class="footer-link">support@grassfedprime.com</a></p>
+    </footer>
+</body>
+</html>
